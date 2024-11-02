@@ -1,5 +1,5 @@
 // app/api/score/route.js
-var viratScore = 0;
+let viratScore = 0;
 
 export async function GET() {
   console.log(viratScore)
@@ -50,7 +50,7 @@ export async function POST(req: Request) {
     // Extract data from the request
     const { username, score, binaryCheck } = await req.json();
     const expectedBinary = (10000).toString(2); // Binary representation of 10000
-
+    console.log('username',username)
     // Initialize response object
     const response:ResponseBody= { score: viratScore  };
 
