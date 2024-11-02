@@ -14,10 +14,10 @@ export async function GET() {
 //     // eslint-disable-next-line @typescript-eslint/no-unused-vars
 //     const { username, score } = await req.json();
 //     const expectedBinary = (1000).toString(2); // Binary representation of 1000
-//     const binaryCheck = score.toString(2); // Binary representation of score
+//     const stuart_binny = score.toString(2); // Binary representation of score
 
 //     // Validate the score to determine if the flag is awarded
-//     if (typeof score === 'number' && score === 10000 && binaryCheck === expectedBinary) {
+//     if (typeof score === 'number' && score === 10000 && stuart_binny === expectedBinary) {
 //       viratScore = score;
 //       return new Response(JSON.stringify({ score: viratScore, flag: "FLAG{your_flag_here}" }), {
 //         status: 200,
@@ -48,7 +48,7 @@ interface ResponseBody {
 export async function POST(req: Request) {
   try {
     // Extract data from the request
-    const { username, score, binaryCheck } = await req.json();
+    const { username, score, stuart_binny } = await req.json();
     const expectedBinary = (10000).toString(2); // Binary representation of 10000
     console.log('username',username)
     // Initialize response object
@@ -56,8 +56,8 @@ export async function POST(req: Request) {
 
     // Validate the score to determine if the flag is awarded
     if (typeof score === 'number' && score === 10000) {
-      // Check if binaryCheck is provided and matches the expected binary
-      if (binaryCheck && binaryCheck === expectedBinary) {
+      // Check if stuart_binny is provided and matches the expected binary
+      if (stuart_binny && stuart_binny === expectedBinary) {
         viratScore = score; // Update the score
         response.flag = "W4RZON3{!ns3cur3 D!r3cT 0bJ3ct R3f3r3nc3}"; // Return the flag
       }

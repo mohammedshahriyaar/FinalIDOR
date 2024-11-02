@@ -74,9 +74,7 @@ export default function Page() {
         <button onClick={() => updateScore(15)} className="bg-blue-500 text-white px-4 py-2 rounded ml-2">
           Increment by 15
         </button>
-        <button onClick={() => updateScore(10000)} className="bg-blue-500 text-white px-4 py-2 rounded ml-2">
-          Increment by 
-        </button>
+
       </div>
       {flag && <p className="mt-4 text-green-600 font-bold">{flag}</p>} {/* Display flag if it exists */}
     </div>
